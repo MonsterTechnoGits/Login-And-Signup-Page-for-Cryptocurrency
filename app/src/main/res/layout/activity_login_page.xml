@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/top_background"
+        android:backgroundTint="@color/theme_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:onClick="Finish"
+            android:scaleType="centerInside"
+            android:src="@drawable/btc_main_image" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/round_arrow_back_ios_black_24dp"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="Sign In Now"
+            android:textAlignment="center"
+            android:textColor="@color/theme_color_text_button"
+            android:textSize="25sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/theme_color_text_button"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColorHint="#979797" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/theme_color_text_button"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColorHint="#979797" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/lato_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:text="Forgot Password?"
+                android:textAllCaps="false"
+                android:textColor="#979797"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/theme_button"
+            android:fontFamily="@font/lato_bold"
+            android:text="SIGN IN"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/theme_color_text_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/lato"
+            android:text="Don't you have an account?"
+            android:textAlignment="center"
+            android:textColor="#6C6C6C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/lato_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="15dp"
+            android:text="Sign up from here"
+            android:onClick="openSignUpPage"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_color_text_button"
+            android:textSize="17sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
